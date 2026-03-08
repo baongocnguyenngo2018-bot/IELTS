@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Reading Thực Chiến - Band 6.5 Cheatsheet</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --bg-body: #faf5ff;      /* Pastel purple 50 */
+            --bg-card: #ffffff;
+            --primary: #9333ea;      /* Purple 600 */
+            --primary-light: #e9d5ff;/* Pastel purple 200 */
+            --primary-border: #d8b4fe;/* Pastel purple 300 */
+            --text-main: #2e1065;    /* Purple 950 */
+            --text-muted: #4c1d95;   /* Purple 900 */
+            --danger: #ef4444;
+            --success: #16a34a;
+            --warning: #eab308;
+            --highlight: #fdf4ff;    /* Fuchsia 50 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- Header --- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary-light), #f3e8ff);
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(147, 51, 234, 0.1);
+            border: 2px solid var(--primary-border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        /* --- Sections --- */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- Cards --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 15px -3px rgba(147, 51, 234, 0.08);
+            border: 1px solid var(--primary-light);
+            transition: transform 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background-color: var(--primary);
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* --- Badges & Tags --- */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .badge-trap { background-color: #fee2e2; color: #b91c1c; }
+        .badge-strategy { background-color: #dcfce7; color: #15803d; }
+        .badge-tip { background-color: #fef08a; color: #854d0e; }
+
+        .tag {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* --- Lists & Content --- */
+        ul {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .trap-list li::before { content: '⚠️'; }
+        .tip-list li::before { content: '⚡'; }
+        .checklist-list li::before { content: '☑️'; }
+
+        .highlight {
+            background-color: var(--highlight);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* --- Special Blocks --- */
+        .alert-box {
+            background-color: #fee2e2;
+            border-left: 4px solid var(--danger);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+
+        .alert-box h4 {
+            color: #991b1b;
+            margin-bottom: 5px;
+        }
+
+        .alert-box p {
+            color: #7f1d1d;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .rule-box {
+            background: var(--bg-card);
+            border: 2px dashed var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .rule-box h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* --- Print Styles --- */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                max-width: 100%;
+            }
+            header {
+                box-shadow: none;
+                border: 2px solid #ccc;
+                page-break-after: avoid;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 15px;
+            }
+            .section-title {
+                page-break-after: avoid;
+            }
+            /* Force background colors to print */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>IELTS Reading Cheatsheet</h1>
+        <p>Chiến thuật sinh tồn Band 6.0 - 6.5 | Tối ưu hóa cho thi Máy (Computer-delivered)</p>
+    </header>
+
+    <!-- SECTION 1: TỔNG QUAN CHIẾN LƯỢC -->
+    <section id="overview">
+        <h2 class="section-title">🎯 Nguyên Tắc Cốt Lõi (Band 6.0 - 6.5)</h2>
+        <div class="rule-box">
+            <h3>"Đọc để TÌM ĐÁP ÁN, không đọc để HIỂU CẢ BÀI!"</h3>
+            <p>Mục tiêu của em là trả lời đúng 23-26 câu. Đừng tốn thời gian dịch từng chữ hay cố hiểu kiến thức học thuật chuyên sâu. Em đang làm bài thi kỹ năng rà soát thông tin, không phải học giả nghiên cứu.</p>
+        </div>
+        <div class="grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="card">
+                <span class="badge badge-strategy">Kỹ thuật thi Máy</span>
+                <ul class="tip-list">
+                    <li><b>Tận dụng Split-screen:</b> Đề một bên, bài đọc một bên. Đỡ tốn thời gian lật trang qua lại.</li>
+                    <li><b>Highlight & Note chuẩn:</b> Quét chuột phải để Highlight danh từ riêng, số liệu. Tuyệt đối không highlight cả câu sẽ gây rối mắt.</li>
+                    <li>Động từ và Tính từ sẽ bị <b>Paraphrase 100%</b>, đừng dại tìm mặt chữ y hệt trong bài.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TỪNG LOẠI CÂU HỎI -->
+    <section id="question-types">
+        <h2 class="section-title">🧠 Bắt Mạch Từng Dạng Bài</h2>
+        <div class="grid">
+
+            <!-- Card 1: TFNG -->
+            <div class="card">
+                <div class="card-title">True/False/Not Given <span class="tag">Theo thứ tự</span></div>
+                <div class="badge badge-trap">Bẫy Thường Gặp</div>
+                <ul class="trap-list">
+                    <li><b>Từ mang tính tuyệt đối:</b> <i>always, all, only, never, completely</i>. Nếu câu hỏi có, mà trong bài là <i>some, often</i> => False.</li>
+                    <li><b>Bẫy "Suy diễn":</b> Thông tin có vẻ hợp lý nhưng bài KHÔNG viết ra. Học viên hay tự suy luận => Đánh nhầm thành True (Đúng ra là Not Given).</li>
+                </ul>
+                <div class="badge badge-strategy">Chiến lược xử lý</div>
+                <ul>
+                    <li>Tìm vùng chứa thông tin bằng tên riêng/số.</li>
+                    <li>So sánh Subject - Verb - Object của câu hỏi với bài đọc.</li>
+                    <li><b>Câu thần chú:</b> Đúng 100% ý là True. Ngược ý hoàn toàn là False. Không tìm thấy/Không đủ cơ sở là Not Given.</li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Matching Headings -->
+            <div class="card">
+                <div class="card-title">Matching Headings <span class="tag">Làm trước</span></div>
+                <div class="badge badge-trap">Bẫy Thường Gặp</div>
+                <ul class="trap-list">
+                    <li><b>Matching Keyword mù quáng:</b> Thấy từ vựng ở Heading giống hệt 1 từ trong đoạn là chọn ngay. (Thường đó chỉ là ý phụ của 1 câu).</li>
+                    <li>Đọc lan man giữa đoạn rồi quên mất ý chính là gì.</li>
+                    <li><b>Lỗi thao tác máy:</b> Kéo thả (Drag & Drop) nhầm Heading vào sai khoảng trống của đoạn văn.</li>
+                </ul>
+                <div class="badge badge-strategy">Chiến lược xử lý</div>
+                <ul>
+                    <li>Gạch dưới keyword của TẤT CẢ Headings trước để nắm sơ chủ đề.</li>
+                    <li>Đọc kỹ <b>2 câu đầu</b> và <b>1 câu cuối</b> của đoạn văn. Đoạn văn tiếng Anh thường viết theo kiểu diễn dịch hoặc quy nạp.</li>
+                    <li>Chỉ lướt nhanh phần giữa đoạn để xem có chứa từ nối "But, However" (đổi ý) không.</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Matching Info -->
+            <div class="card">
+                <div class="card-title">Matching Info (Which paragraph contains...) <span class="tag">Làm cuối</span></div>
+                <div class="badge badge-trap">Bẫy Thường Gặp</div>
+                <ul class="trap-list">
+                    <li>Dạng này <b>KHÔNG theo thứ tự</b>. Nó tốn thời gian nhất!</li>
+                    <li>Chữ <i>"NB: You may use any letter more than once"</i>. Nghĩa là 1 đoạn có thể chứa 2 đáp án!</li>
+                </ul>
+                <div class="badge badge-strategy">Chiến lược xử lý</div>
+                <ul>
+                    <li><b>NÊN ĐỂ LÀM CUỐI CÙNG</b> của Passage đó. Khi làm các dạng khác xong, em đã nhớ được vị trí thông tin nằm ở đoạn nào.</li>
+                    <li>Đọc câu hỏi, tự phân loại: Nó đang hỏi về một con số (a figure), một mô tả (a description), hay một lý do (a reason)? Rà soát nhanh các đoạn có chứa yếu tố đó.</li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Multiple Choice -->
+            <div class="card">
+                <div class="card-title">Multiple Choice <span class="tag">Theo thứ tự</span></div>
+                <div class="badge badge-trap">Bẫy Thường Gặp</div>
+                <ul class="trap-list">
+                    <li>Bài đọc nhắc đến CẢ 4 đáp án A, B, C, D (nhưng 3 cái là thông tin râu ria hoặc ngược ý).</li>
+                    <li>Bị lừa bởi từ nối: Câu trước khẳng định đáp án A, nhưng sau dấu phẩy có chữ "However/But" và chọn đáp án B.</li>
+                </ul>
+                <div class="badge badge-strategy">Chiến lược xử lý</div>
+                <ul>
+                    <li>Đọc câu hỏi trước. <b>Khoan đọc đáp án A, B, C, D</b> để tránh bị loạn trí.</li>
+                    <li>Dùng keyword trong câu hỏi để tìm vị trí trong bài.</li>
+                    <li>Đọc đoạn đó, tự suy ra câu trả lời trong đầu, rồi mới click chọn đáp án trên máy tính.</li>
+                </ul>
+            </div>
+
+            <!-- Card 5: Completion -->
+            <div class="card">
+                <div class="card-title">Gap-fill / Completion <span class="tag">Thường theo thứ tự</span></div>
+                <div class="badge badge-trap">Bẫy Thường Gặp</div>
+                <ul class="trap-list">
+                    <li>Vượt quá số từ quy định (Ví dụ: <i>NO MORE THAN TWO WORDS</i> mà điền 3 từ là mất điểm).</li>
+                    <li>Gõ tay sai chính tả hoặc sai ngữ pháp (thiếu 's' số nhiều).</li>
+                </ul>
+                <div class="badge badge-tip">Đặc quyền thi Máy</div>
+                <ul class="tip-list" style="margin-bottom: 15px;">
+                    <li><b>Dùng phím tắt:</b> Luôn copy (Ctrl+C / Cmd+C) trực tiếp từ bài đọc và Paste vào ô trống. Tuyệt đối KHÔNG gõ tay để loại trừ 100% rủi ro sai chính tả!</li>
+                </ul>
+                <div class="badge badge-strategy">Chiến lược xử lý</div>
+                <ul>
+                    <li>Luôn khoanh tròn số từ cho phép trước tiên.</li>
+                    <li>Phân tích chỗ trống: Cần <b>Danh từ (Noun)</b>, Động từ hay Tính từ? Cần số ít hay số nhiều?</li>
+                    <li>Đáp án <b>phải được chép y nguyên</b> từ bài đọc, không tự biến đổi dạng từ (trừ dạng Summary có box từ vựng).</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: CHIẾN LƯỢC HOẢNG LOẠN -->
+    <section id="panic-mode">
+        <h2 class="section-title">🚨 Cấp Cứu: Khi Bị Hoảng Loạn Trong Phòng Thi</h2>
+        
+        <div class="alert-box">
+            <h4>Tình huống 1: Kẹt ở 1 câu quá 2 phút không tìm thấy đáp án</h4>
+            <p><b>Giải pháp:</b> CHUYỂN NGAY LẬP TỨC. Bấm tick vào ô <b>Review</b> (ở dưới cùng màn hình) để ghim lại câu này, rồi đi tiếp. Đừng để bị "cuốn" vào vùng mù. Xong bài còn giờ thì bấm lại số câu để nhảy về giải quyết sau.</p>
+        </div>
+
+        <div class="alert-box">
+            <h4>Tình huống 2: Đồng hồ đếm ngược chớp ĐỎ (còn 10 phút / 5 phút)</h4>
+            <p><b>Giải pháp:</b> Tuyệt đối không nhìn đồng hồ nữa! Nếu bị tâm lý, lấy tay che đi góc trên màn hình. Rà soát ngay thanh Navigation xem câu nào trống thì click đánh lụi toàn bộ (Ví dụ: toàn B, hoặc toàn False/Not Given). KHÔNG ĐỂ TRỐNG.</p>
+        </div>
+
+        <div class="alert-box">
+            <h4>Tình huống 3: Passage 3 toàn từ vựng chuyên ngành, không hiểu gì</h4>
+            <p><b>Giải pháp:</b> Đừng cố dịch. Hãy coi bài đọc như một bản đồ ký hiệu. Tìm ký hiệu A (keyword trong câu hỏi) ở trên bản đồ (bài đọc), xem ký hiệu B đứng kế nó là chữ gì rồi copy-paste. Tập trung lấy điểm dạng Completion ở đoạn này vì dễ tìm nhất.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CHECKLIST CUỐI CÙNG -->
+    <section id="last-5-mins">
+        <h2 class="section-title">⏱️ Checklist 5 Phút Cuối (Bản Computer-Delivered)</h2>
+        <div class="card" style="background-color: var(--highlight); border-color: var(--primary);">
+            <ul class="checklist-list" style="font-size: 1.1rem; font-weight: 500;">
+                <li><b>Nhìn thanh Navigation dưới cùng:</b> Đảm bảo 100% các ô câu hỏi đã đổi màu (báo hiệu đã chọn đáp án). Click lụi ngay nếu phát hiện ô vuông nào còn trắng/trống!</li>
+                <li><b>Check lại các câu Review:</b> Bấm trực tiếp vào các ô có đánh dấu ghim tròn để kiểm tra lại những câu bạn đang phân vân (nếu vẫn còn giờ).</li>
+                <li><b>Dạng điền từ:</b> Kiểm tra kỹ xem lúc copy-paste bạn có lỡ quét dư dấu câu (dấu chấm, dấu phẩy) hoặc bị dính ký tự trắng (space) dư thừa dẫn đến lố số từ quy định không.</li>
+                <li><b>Không chừa thời gian chuyển đáp án:</b> Máy tính sẽ tự động đóng và thu bài ngay giây 00:00. Hãy chiến đấu đến giây cuối cùng, không cần thao tác nút nộp bài!</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
